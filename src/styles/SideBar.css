@@ -1,0 +1,138 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+Link,
+p {
+  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #273c75;
+}
+
+body {
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100%; /* instead of 100vh */
+  overflow-x: hidden; /* stop horizontal scroll */
+}
+
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 210px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-right: 2rem;
+  gap: 1rem;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+}
+
+.logo {
+  margin-left: 2rem;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* ✅ Fix: style the <Link> inside nav-item */
+.nav-item a {
+  color: rgba(2, 21, 116, 0.9);
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  font-weight: 500;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.536);
+  border-left: 4px solid rgb(158, 155, 180);
+}
+
+.nav-item.active a {
+  color: rgb(5, 21, 86);
+  font-weight: 600;
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 6rem;
+  height: 1.8rem;
+  background-color: #0c035d; /* same blue as your header */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.2);
+  transition: all 0.3s ease;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
+}
+
+.exit:hover {
+  background-color: #1565c0; /* darker hover tone */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(21, 101, 192, 0.3);
+}
+
+.exit-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: invert(100%);
+  transition: transform 0.3s ease;
+}
+
+.exit:hover .exit-icon {
+  transform: translateX(4px);
+}
+
+.exit p {
+  color: white;
+  font-weight: 600;
+  font-family: "Geist", "Poppins", sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+/* Container */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+}

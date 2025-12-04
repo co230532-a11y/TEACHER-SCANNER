@@ -1,0 +1,194 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === PAGE WRAPPER === */
+.AttendeesPage {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #f0f1f5;
+}
+
+/* === MAIN CONTAINER (beside sidebar) === */
+.attendees-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+  overflow: hidden;
+}
+
+/* === HEADER SECTION === */
+.attendees-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #03164a;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === TABLE WRAPPER === */
+.attendees-table {
+  margin-left: 250px;
+  width: 70rem;
+  border-collapse: collapse;
+  background: #ffffff23;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* === TABLE HEAD & BODY === */
+.attendees-table th,
+.attendees-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.attendees-table th {
+  background: #02085dc6;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.attendees-table tr:hover {
+  background: #f1f6ff;
+  transition: background 0.2s ease;
+}
+
+/* === BUTTONS === */
+.view-map-btn {
+  padding: 6px 14px;
+  background: #042379;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.view-map-btn:hover {
+  background: #1e2f5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.delete-btn {
+  background: #a81707d6;
+  color: white;
+  margin-left: 0.5rem;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* === EMPTY STATE === */
+.no-attendees {
+  color: #666;
+  font-style: italic;
+  margin-top: 2rem;
+  margin-left: 180px;
+  font-size: 1rem;
+}
+
+/* === CLEAR BUTTON === */
+.note {
+  font-weight: 350;
+  color: #666;
+  margin-top: 1vh;
+  margin-left: 15.6rem;
+}
+.clear-btn {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: 250px;
+  padding: 10px 16px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clear-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/**/
+.top {
+  display: flex;
+  width: 70rem;
+  margin-left: 15.6rem;
+}
+.export-buttons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 14.6rem;
+  padding: 16px;
+  gap: 0.5rem;
+}
+
+.exprt-note {
+  color: #666;
+  display: flex;
+  margin-left: 15.6rem;
+  margin-top: 5vh;
+  justify-content: left;
+  font-weight: 350;
+}
+.export-btn {
+  padding: 8px 16px;
+  background: #273c75;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.export-btn:hover {
+  background: #1e2f5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1200px) {
+  .attendees-table {
+    width: 100%;
+    margin-left: 0;
+  }
+  .attendees-header {
+    margin-left: 0;
+    text-align: center;
+  }
+  .clear-btn {
+    margin-right: 0;
+    align-self: center;
+  }
+}
