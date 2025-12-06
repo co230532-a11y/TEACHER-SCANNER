@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 1px solid red;
+      }
+
+      body {
+        background-color: rgb(174, 169, 169);
+      }
+
+      /*containers*/
+      .container,
+      .sideBar,
+      .content,
+      .content-sections {
+        display: flex;
+        height: 150vh;
+      }
+      .sideBar {
+        flex: 0.18;
+      }
+      .content {
+        flex: 1;
+        flex-direction: column;
+      }
+
+      /*content section*/
+      header {
+        display: flex;
+        flex: 0.17;
+      }
+      .content-sections {
+        flex: 1;
+      }
+      /*left & right (content section)*/
+      .left {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        flex: 1;
+      }
+      .right {
+        flex: 0.4;
+      }
+
+      /*left Contents*/
+      .scannerSection {
+        flex: 1;
+      }
+      .apiSection {
+        display: flex;
+        gap: 1rem;
+        flex: 0.4;
+      }
+
+      /*APIs Sections*/
+      .calendarAPI {
+        flex: 1;
+      }
+      .weatherAPI {
+        flex: 1;
+      }
+
+      /*Header*/
+      .timeDate {
+        flex: 0.4;
+      }
+      .searchBox {
+        flex: 1;
+      }
+      .icons {
+        flex: 0.5;
+      }
+
+      /*Search BOX*/
+      .searchBox {
+        display: flex;
+        background-color: aliceblue;
+        height: 3.5rem;
+        align-self: center;
+        gap: 1rem;
+        border-radius: 10px;
+      }
+      .searchBox input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+      }
+      .searchBox img {
+        margin-left: 1rem;
+        height: 1.6rem;
+        align-self: center;
+        object-fit: contain;
+        border: none;
+        outline: none;
+        filter: invert(30%) sepia(10%) saturate(500%) hue-rotate(200deg);
+      }
+
+      /*icon section*/
+      .icons{
+        display: flex;
+      }
+
+      .chat{
+        flex: 1;
+        height: 2rem;
+        background-color: transparent;
+        border: none;
+         align-self: center;
+      }
+      .chat img{
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+       
+      }
+
+      .icons p{
+        flex: 1;
+        align-self: center;
+      }
+
+      .profile{
+        flex: 1;
+        height: 2rem;
+        background-color: transparent;
+        border:none;
+        align-self: center;
+        margin-top: -1rem;
+      }
+      .profile img{
+        background-color: #f1f5ff; /* soft blue circle */
+        border: none;
+        cursor: pointer;
+        border-radius: 50%; /* circular shape */
+        margin-left: 0.5rem;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sideBar"></div>
+      <div class="content">
+        <header>
+          <div class="timeDate"></div>
+          <div class="searchBox">
+            <img src="img/search.png" alt="Search Icon" />
+            <input type="text" placeholder="Search..." required />
+          </div>
+          <div class="icons">
+            <button class="chat">
+                 <img src="img/chat.png"></img>
+            </button> 
+            <p>Khan Fernandez</p>
+            <button class="profile">
+                <img src="img/male.png"></img>
+            </button>
+          </div>
+        </header>
+        <div class="content-sections">
+          <div class="left">
+            <div class="scannerSection"></div>
+            <div class="apiSection">
+              <div class="calendarAPI"></div>
+              <div class="weatherAPI"></div>
+            </div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
